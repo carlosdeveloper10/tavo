@@ -10,27 +10,27 @@ pipeline {
      stages {
          stage('Unit Test') {
          
-	         step{
+	         steps{
 	             sh 'echo Running Test'
 	             sh 'echo Running Test2'
 	         }
          }
          
          stage('Integration test') {
-	         step{
+	         steps{
 	             sh 'echo Running Integartion Test'
 	         }
          }
          stage('Packaging and versioning') {
          
-	         step{
+	         steps{
 	            sh 'echo Running Verdionig' 
 	         }
          }
          
          stage('Deploy') {
          
-	         step{
+	         steps{
 	             sh 'echo Running Deploying'
 	         }
          }
