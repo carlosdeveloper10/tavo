@@ -3,10 +3,6 @@ pipeline {
         label 'docker-agent'
      }
      
-     environment {
-         
-     }
-     
      stages {
          stage('Unit Test') {
             sh 'echo Running Test'
