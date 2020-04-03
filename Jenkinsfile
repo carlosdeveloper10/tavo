@@ -15,6 +15,10 @@ pipeline {
          }
          
          stage('Integration test') {
+		 when{
+				branch 'release/*'
+         	}
+		 
 	         steps{
 	             sh 'echo Running Integartion Test'
 	         }
