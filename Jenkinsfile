@@ -3,21 +3,36 @@ pipeline {
         label 'docker-agent'
      }
      
+     environment {
+         
+     }
+     
      stages {
          stage('Unit Test') {
-            sh 'echo Running Test'
+         
+	         step{
+	             sh 'echo Running Test'
+	             sh 'echo Running Test2'
+	         }
          }
          
          stage('Integration test') {
-            sh 'echo Running Integartion Test'
+	         step{
+	             sh 'echo Running Integartion Test'
+	         }
          }
-         
          stage('Packaging and versioning') {
-            sh 'echo Running Verdionig'
+         
+	         step{
+	            sh 'echo Running Verdionig' 
+	         }
          }
          
          stage('Deploy') {
-            sh 'echo Running Deploying'
+         
+	         step{
+	             sh 'echo Running Deploying'
+	         }
          }
-     }
+      }
 }
